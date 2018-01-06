@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Regional Resource Location</title>
+</head>
+<body>
+    <a href="/">HOME</a> | <a href="/crawl_data">Crawl Data</a> | <a href="/max_min_regression">Show Max/Min Regression</a>
+    <p>Before you start simulating the data collection and analysis, you will need to specify the regional data resources and save them
+       into database. The recommended resources have been included in this page. Please copy regional names such as UK, Wales, ... and their
+       URLs into the corresponding fields. The data are classified into to present types, i.e., RANKED and ORDERED. Please make sure you have specified
+       the correct resource present type. Wrongly selected resource present type leads to failure upon data parsing.
+    </p>
+
+    <p>There exist abbreviation definions for the regional fields, these being:
+    <ul>
+       <li>MAX : Max Temp</li>
+       <li>MIN : Min Temp</li>
+       <li>MEN : Mean Temp</li>
+       <li>SSN : Shunshine</li>
+       <li>RNF : Rainfall</li>
+       <li>RND : Raindays</li>
+       <li>DAF : Days of Air frost</li>
+    </ul> 
+    </p>
+    <br>
+    <h1>Please input regional detail</h1>
+
+    <form action="/region_profile" method="POST">
+        <label>Region name: </label>
+        <input type="text" name="region_name">
+        <br>
+        <label>Resource type: </label>
+        <input type="text" name="resource_type">
+        <br>
+        <label>Resource present type: </label>
+        <select name='present_type'>
+            <option value="RANKED">RANKED</option>
+            <option value="ORDERED" selected>ORDERED</option>
+        </select>
+        <br>
+        <label>URL: </label>
+        <input type="text" name="url">
+        <br><br>
+        <input type="submit" value="submit">
+    </form>
+
+    <br>
+
+<h2><a id="yearOrdered" name="yearOrdered"></a>Year ordered statistics</h2>
+
+<table cellpadding="0" cellspacing="0" class="table" summary="Year ordered statistics">
+ <tbody>
+  <tr>
+   <th>Region</th>
+   <th>Max Temp</th>
+   <th>Min Temp</th>
+   <th>Mean Temp</th>
+   <th>Sunshine</th>
+   <th>Rainfall</th>
+   <th>Raindays<br />
+   ≥1.0mm</th>
+   <th>Days of<br />
+   Air frost</th>
+  </tr>
+  <tr>
+   <td><strong>UK</strong></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmax/date/UK.txt" title="UK Date Tmax" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmin/date/UK.txt" title="UK Date Tmin" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmean/date/UK.txt" title="UK Date Tmean" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Sunshine/date/UK.txt" title="UK Date Sunshine" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Rainfall/date/UK.txt" title="UK Date Rainfall" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Raindays1mm/date/UK.txt" title="UK Date Raindays1mm" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/AirFrost/date/UK.txt" title="UK Date AirFrost" class="external" rel="external">Download</a></td>
+  </tr>
+  <tr>
+   <td><strong>England</strong></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmax/date/England.txt" title="England Date Tmax" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmin/date/England.txt" title="England Date Tmin" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmean/date/England.txt" title="England Date Tmean" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Sunshine/date/England.txt" title="England Date Sunshine" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Rainfall/date/England.txt" title="England Date Rainfall" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Raindays1mm/date/England.txt" title="England Date Raindays1mm" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/AirFrost/date/UK.txt" title="England Date AirFrost" class="external" rel="external">Download</a></td>
+  </tr>
+  <tr>
+   <td><strong>Wales</strong></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmax/date/Wales.txt" title="Wales Date Tmax" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmin/date/Wales.txt" title="Wales Date Tmin" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmean/date/Wales.txt" title="Wales Date Tmean" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Sunshine/date/Wales.txt" title="Wales Date Sunshine" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Rainfall/date/Wales.txt" title="Wales Date Rainfall" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Raindays1mm/date/Wales.txt" title="Wales Date Raindays1mm" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/AirFrost/date/Wales.txt" title="Wales Date AirFrost" class="external" rel="external">Download</a></td>
+  </tr>
+  <tr>
+   <td><strong>Scotland</strong></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmax/date/Scotland.txt" title="Scotland Date Tmax" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmin/date/Scotland.txt" title="Scotland Date Tmin" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmean/date/Scotland.txt" title="Scotland Date Tmean" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Sunshine/date/Scotland.txt" title="Scotland Date Sunshine" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Rainfall/date/Scotland.txt" title="Scotland Date Rainfall" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Raindays1mm/date/Scotland.txt" title="Scotland Date Raindays1mm" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/AirFrost/date/Scotland.txt" title="Scotland Date AirFrost" class="external" rel="external">Download</a></td>
+  </tr>
+  <tr>
+   <td><strong>Northern_Ireland</strong></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmax/date/Northern_Ireland.txt" title="Northern_Ireland Date Tmax" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmin/date/Northern_Ireland.txt" title="Northern_Ireland Date Tmin" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmean/date/Northern_Ireland.txt" title="Northern_Ireland Date Tmean" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Sunshine/date/Northern_Ireland.txt" title="Northern_Ireland Date Sunshine" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Rainfall/date/Northern_Ireland.txt" title="Northern_Ireland Date Rainfall" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Raindays1mm/date/Northern_Ireland.txt" title="Northern_Ireland Date Raindays1mm" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/AirFrost/date/Northern_Ireland.txt" title="Northern_Ireland Date AirFrost" class="external" rel="external">Download</a></td>
+  </tr>
+  <tr>
+   <td><strong>England &amp; Wales</strong></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmax/date/England_and_Wales.txt" title="England_and_Wales Date Tmax" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmin/date/England_and_Wales.txt" title="England_and_Wales Date Tmin" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmean/date/England_and_Wales.txt" title="England_and_Wales Date Tmean" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Sunshine/date/England_and_Wales.txt" title="England_and_Wales Date Sunshine" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Rainfall/date/England_and_Wales.txt" title="England_and_Wales Date Rainfall" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Raindays1mm/date/England_and_Wales.txt" title="England_and_Wales Date Raindays1mm" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/AirFrost/date/England_and_Wales.txt" title="England_and_Wales Date AirFrost" class="external" rel="external">Download</a></td>
+  </tr>
+  <tr>
+   <td><strong>England N</strong></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmax/date/England_N.txt" title="England_N Date Tmax" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmin/date/England_N.txt" title="England_N Date Tmin" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmean/date/England_N.txt" title="England_N Date Tmean" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Sunshine/date/England_N.txt" title="England_N Date Sunshine" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Rainfall/date/England_N.txt" title="England_N Date Rainfall" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Raindays1mm/date/England_N.txt" title="England_N Date Raindays1mm" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/AirFrost/date/England_N.txt" title="England_N Date AirFrost" class="external" rel="external">Download</a></td>
+  </tr>
+  <tr>
+   <td><strong>England S</strong></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmax/date/England_S.txt" title="England_S Date Tmax" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmin/date/England_S.txt" title="England_S Date Tmin" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmean/date/England_S.txt" title="England_S Date Tmean" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Sunshine/date/England_S.txt" title="England_S Date Sunshine" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Rainfall/date/England_S.txt" title="England_S Date Rainfall" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Raindays1mm/date/England_S.txt" title="England_S Date Raindays1mm" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/AirFrost/date/England_S.txt" title="England_S Date AirFrost" class="external" rel="external">Download</a></td>
+  </tr>
+  <tr>
+   <td><strong>Scotland N</strong></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmax/date/Scotland_N.txt" title="Scotland_N Date Tmax" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmin/date/Scotland_N.txt" title="Scotland_N Date Tmin" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmean/date/Scotland_N.txt" title="Scotland_N Date Tmean" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Sunshine/date/Scotland_N.txt" title="Scotland_N Date Sunshine" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Rainfall/date/Scotland_N.txt" title="Scotland_N Date Rainfall" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Raindays1mm/date/Scotland_N.txt" title="Scotland_N Date Raindays1mm" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/AirFrost/date/Scotland_N.txt" title="Scotland_N Date AirFrost" class="external" rel="external">Download</a></td>
+  </tr>
+  <tr>
+   <td><strong>Scotland E</strong></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmax/date/Scotland_E.txt" title="Scotland_E Date Tmax" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmin/date/Scotland_E.txt" title="Scotland_E Date Tmin" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmean/date/Scotland_E.txt" title="Scotland_E Date Tmean" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Sunshine/date/Scotland_E.txt" title="Scotland_E Date Sunshine" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Rainfall/date/Scotland_E.txt" title="Scotland_E Date Rainfall" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Raindays1mm/date/Scotland_E.txt" title="Scotland_E Date Raindays1mm" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/AirFrost/date/Scotland_E.txt" title="Scotland_E Date AirFrost" class="external" rel="external">Download</a></td>
+  </tr>
+  <tr>
+   <td><strong>Scotland W</strong></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmax/date/Scotland_W.txt" title="Scotland_W Date Tmax" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmin/date/Scotland_W.txt" title="Scotland_W Date Tmin" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmean/date/Scotland_W.txt" title="Scotland_W Date Tmean" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Sunshine/date/Scotland_W.txt" title="Scotland_W Date Sunshine" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Rainfall/date/Scotland_W.txt" title="Scotland_W Date Rainfall" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Raindays1mm/date/Scotland_W.txt" title="Scotland_W Date Raindays1mm" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/AirFrost/date/Scotland_W.txt" title="Scotland_W Date AirFrost" class="external" rel="external">Download</a></td>
+  </tr>
+  <tr>
+   <td><strong>England E &amp; NE</strong></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmax/date/England_E_and_NE.txt" title="England_E_and_NE Date Tmax" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmin/date/England_E_and_NE.txt" title="England_E_and_NE Date Tmin" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmean/date/England_E_and_NE.txt" title="England_E_and_NE Date Tmean" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Sunshine/date/England_E_and_NE.txt" title="England_E_and_NE Date Sunshine" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Rainfall/date/England_E_and_NE.txt" title="England_E_and_NE Date Rainfall" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Raindays1mm/date/England_E_and_NE.txt" title="England_E_and_NE Date Raindays1mm" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/AirFrost/date/England_E_and_NE.txt" title="England_E_and_NE Date AirFrost" class="external" rel="external">Download</a></td>
+  </tr>
+  <tr>
+   <td><strong>England NW/Wales N</strong></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmax/date/England_NW_and_N_Wales.txt" title="England_NW_and_N_Wales Date Tmax" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmin/date/England_NW_and_N_Wales.txt" title="England_NW_and_N_Wales Date Tmin" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmean/date/England_NW_and_N_Wales.txt" title="England_NW_and_N_Wales Date Tmean" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Sunshine/date/England_NW_and_N_Wales.txt" title="England_NW_and_N_Wales Date Sunshine" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Rainfall/date/England_NW_and_N_Wales.txt" title="England_NW_and_N_Wales Date Rainfall" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Raindays1mm/date/England_NW_and_N_Wales.txt" title="England_NW_and_N_Wales Date Raindays1mm" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/AirFrost/date/England_NW_and_N_Wales.txt" title="England_NW_and_N_Wales Date AirFrost" class="external" rel="external">Download</a></td>
+  </tr>
+  <tr>
+   <td><strong>Midlands</strong></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmax/date/Midlands.txt" title="Midlands Date Tmax" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmin/date/Midlands.txt" title="Midlands Date Tmin" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmean/date/Midlands.txt" title="Midlands Date Tmean" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Sunshine/date/Midlands.txt" title="Midlands Date Sunshine" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Rainfall/date/Midlands.txt" title="Midlands Date Rainfall" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Raindays1mm/date/Midlands.txt" title="Midlands Date Raindays1mm" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/AirFrost/date/Midlands.txt" title="Midlands Date AirFrost" class="external" rel="external">Download</a></td>
+  </tr>
+  <tr>
+   <td><strong>East Anglia</strong></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmax/date/East_Anglia.txt" title="East_Anglia Date Tmax" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmin/date/East_Anglia.txt" title="East_Anglia Date Tmin" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmean/date/East_Anglia.txt" title="East_Anglia Date Tmean" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Sunshine/date/East_Anglia.txt" title="East_Anglia Date Sunshine" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Rainfall/date/East_Anglia.txt" title="East_Anglia Date Rainfall" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Raindays1mm/date/East_Anglia.txt" title="East_Anglia Date Raindays1mm" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/AirFrost/date/East_Anglia.txt" title="East_Anglia Date AirFrost" class="external" rel="external">Download</a></td>
+  </tr>
+  <tr>
+   <td><strong>England SW/Wales S</strong></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmax/date/England_SW_and_S_Wales.txt" title="England_SW_and_S_Wales Date Tmax" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmin/date/England_SW_and_S_Wales.txt" title="England_SW_and_S_Wales Date Tmin" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmean/date/England_SW_and_S_Wales.txt" title="England_SW_and_S_Wales Date Tmean" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Sunshine/date/England_SW_and_S_Wales.txt" title="England_SW_and_S_Wales Date Sunshine" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Rainfall/date/England_SW_and_S_Wales.txt" title="England_SW_and_S_Wales Date Rainfall" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Raindays1mm/date/England_SW_and_S_Wales.txt" title="England_SW_and_S_Wales Date Raindays1mm" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/AirFrost/date/England_SW_and_S_Wales.txt" title="England_SW_and_S_Wales Date AirFrost" class="external" rel="external">Download</a></td>
+  </tr>
+  <tr>
+   <td><strong>England SE/Central S</strong></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmax/date/England_SE_and_Central_S.txt" title="England_SE_and_Central_S Date Tmax" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmin/date/England_SE_and_Central_S.txt" title="England_SE_and_Central_S Date Tmin" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmean/date/England_SE_and_Central_S.txt" title="England_SE_and_Central_S Date Tmean" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Sunshine/date/England_SE_and_Central_S.txt" title="England_SE_and_Central_S Date Sunshine" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Rainfall/date/England_SE_and_Central_S.txt" title="England_SE_and_Central_S Date Rainfall" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Raindays1mm/date/England_SE_and_Central_S.txt" title="England_SE_and_Central_S Date Raindays1mm" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/AirFrost/date/England_SE_and_Central_S.txt" title="England_SE_and_Central_S Date AirFrost" class="external" rel="external">Download</a></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2><a id="rankOrdered" name="rankOrdered"></a>Rank ordered statistics</h2>
+
+<table cellpadding="0" cellspacing="0" class="table" summary="Year ordered statistics">
+ <tbody>
+  <tr>
+   <th>Region</th>
+   <th>Max Temp</th>
+   <th>Min Temp</th>
+   <th>Mean Temp</th>
+   <th>Sunshine</th>
+   <th>Rainfall</th>
+   <th>Raindays<br />
+   ≥1.0mm</th>
+   <th>Days of<br />
+   Air frost</th>
+  </tr>
+  <tr>
+   <td><strong>UK</strong></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmax/ranked/UK.txt" title="UK Ranked Tmax" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmin/ranked/UK.txt" title="UK Ranked Tmin" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmean/ranked/UK.txt" title="UK Ranked Tmean" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Sunshine/ranked/UK.txt" title="UK Ranked Sunshine" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Rainfall/ranked/UK.txt" title="UK Ranked Rainfall" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Raindays1mm/ranked/UK.txt" title="UK Ranked Raindays1mm" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/AirFrost/ranked/UK.txt" title="UK Ranked AirFrost" class="external" rel="external">Download</a></td>
+  </tr>
+  <tr>
+   <td><strong>England</strong></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmax/ranked/England.txt" title="England Ranked Tmax" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmin/ranked/England.txt" title="England Ranked Tmin" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmean/ranked/England.txt" title="England Ranked Tmean" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Sunshine/ranked/England.txt" title="England Ranked Sunshine" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Rainfall/ranked/England.txt" title="England Ranked Rainfall" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Raindays1mm/ranked/England.txt" title="England Ranked Raindays1mm" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/AirFrost/ranked/UK.txt" title="England Ranked AirFrost" class="external" rel="external">Download</a></td>
+  </tr>
+  <tr>
+   <td><strong>Wales</strong></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmax/ranked/Wales.txt" title="Wales Ranked Tmax" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmin/ranked/Wales.txt" title="Wales Ranked Tmin" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmean/ranked/Wales.txt" title="Wales Ranked Tmean" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Sunshine/ranked/Wales.txt" title="Wales Ranked Sunshine" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Rainfall/ranked/Wales.txt" title="Wales Ranked Rainfall" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Raindays1mm/ranked/Wales.txt" title="Wales Ranked Raindays1mm" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/AirFrost/ranked/Wales.txt" title="Wales Ranked AirFrost" class="external" rel="external">Download</a></td>
+  </tr>
+  <tr>
+   <td><strong>Scotland</strong></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmax/ranked/Scotland.txt" title="Scotland Ranked Tmax" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmin/ranked/Scotland.txt" title="Scotland Ranked Tmin" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmean/ranked/Scotland.txt" title="Scotland Ranked Tmean" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Sunshine/ranked/Scotland.txt" title="Scotland Ranked Sunshine" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Rainfall/ranked/Scotland.txt" title="Scotland Ranked Rainfall" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Raindays1mm/ranked/Scotland.txt" title="Scotland Ranked Raindays1mm" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/AirFrost/ranked/Scotland.txt" title="Scotland Ranked AirFrost" class="external" rel="external">Download</a></td>
+  </tr>
+  <tr>
+   <td><strong>Northern_Ireland</strong></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmax/ranked/Northern_Ireland.txt" title="Northern_Ireland Ranked Tmax" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmin/ranked/Northern_Ireland.txt" title="Northern_Ireland Ranked Tmin" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmean/ranked/Northern_Ireland.txt" title="Northern_Ireland Ranked Tmean" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Sunshine/ranked/Northern_Ireland.txt" title="Northern_Ireland Ranked Sunshine" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Rainfall/ranked/Northern_Ireland.txt" title="Northern_Ireland Ranked Rainfall" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Raindays1mm/ranked/Northern_Ireland.txt" title="Northern_Ireland Ranked Raindays1mm" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/AirFrost/ranked/Northern_Ireland.txt" title="Northern_Ireland Ranked AirFrost" class="external" rel="external">Download</a></td>
+  </tr>
+  <tr>
+   <td><strong>England &amp; Wales</strong></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmax/ranked/England_and_Wales.txt" title="England_and_Wales Ranked Tmax" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmin/ranked/England_and_Wales.txt" title="England_and_Wales Ranked Tmin" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmean/ranked/England_and_Wales.txt" title="England_and_Wales Ranked Tmean" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Sunshine/ranked/England_and_Wales.txt" title="England_and_Wales Ranked Sunshine" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Rainfall/ranked/England_and_Wales.txt" title="England_and_Wales Ranked Rainfall" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Raindays1mm/ranked/England_and_Wales.txt" title="England_and_Wales Ranked Raindays1mm" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/AirFrost/ranked/England_and_Wales.txt" title="England_and_Wales Ranked AirFrost" class="external" rel="external">Download</a></td>
+  </tr>
+  <tr>
+   <td><strong>England N</strong></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmax/ranked/England_N.txt" title="England_N Ranked Tmax" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmin/ranked/England_N.txt" title="England_N Ranked Tmin" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmean/ranked/England_N.txt" title="England_N Ranked Tmean" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Sunshine/ranked/England_N.txt" title="England_N Ranked Sunshine" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Rainfall/ranked/England_N.txt" title="England_N Ranked Rainfall" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Raindays1mm/ranked/England_N.txt" title="England_N Ranked Raindays1mm" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/AirFrost/ranked/England_N.txt" title="England_N Ranked AirFrost" class="external" rel="external">Download</a></td>
+  </tr>
+  <tr>
+   <td><strong>England S</strong></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmax/ranked/England_S.txt" title="England_S Ranked Tmax" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmin/ranked/England_S.txt" title="England_S Ranked Tmin" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmean/ranked/England_S.txt" title="England_S Ranked Tmean" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Sunshine/ranked/England_S.txt" title="England_S Ranked Sunshine" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Rainfall/ranked/England_S.txt" title="England_S Ranked Rainfall" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Raindays1mm/ranked/England_S.txt" title="England_S Ranked Raindays1mm" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/AirFrost/ranked/England_S.txt" title="England_S Ranked AirFrost" class="external" rel="external">Download</a></td>
+  </tr>
+  <tr>
+   <td><strong>Scotland N</strong></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmax/ranked/Scotland_N.txt" title="Scotland_N Ranked Tmax" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmin/ranked/Scotland_N.txt" title="Scotland_N Ranked Tmin" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmean/ranked/Scotland_N.txt" title="Scotland_N Ranked Tmean" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Sunshine/ranked/Scotland_N.txt" title="Scotland_N Ranked Sunshine" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Rainfall/ranked/Scotland_N.txt" title="Scotland_N Ranked Rainfall" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Raindays1mm/ranked/Scotland_N.txt" title="Scotland_N Ranked Raindays1mm" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/AirFrost/ranked/Scotland_N.txt" title="Scotland_N Ranked AirFrost" class="external" rel="external">Download</a></td>
+  </tr>
+  <tr>
+   <td><strong>Scotland E</strong></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmax/ranked/Scotland_E.txt" title="Scotland_E Ranked Tmax" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmin/ranked/Scotland_E.txt" title="Scotland_E Ranked Tmin" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmean/ranked/Scotland_E.txt" title="Scotland_E Ranked Tmean" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Sunshine/ranked/Scotland_E.txt" title="Scotland_E Ranked Sunshine" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Rainfall/ranked/Scotland_E.txt" title="Scotland_E Ranked Rainfall" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Raindays1mm/ranked/Scotland_E.txt" title="Scotland_E Ranked Raindays1mm" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/AirFrost/ranked/Scotland_E.txt" title="Scotland_E Ranked AirFrost" class="external" rel="external">Download</a></td>
+  </tr>
+  <tr>
+   <td><strong>Scotland W</strong></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmax/ranked/Scotland_W.txt" title="Scotland_W Ranked Tmax" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmin/ranked/Scotland_W.txt" title="Scotland_W Ranked Tmin" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmean/ranked/Scotland_W.txt" title="Scotland_W Ranked Tmean" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Sunshine/ranked/Scotland_W.txt" title="Scotland_W Ranked Sunshine" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Rainfall/ranked/Scotland_W.txt" title="Scotland_W Ranked Rainfall" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Raindays1mm/ranked/Scotland_W.txt" title="Scotland_W Ranked Raindays1mm" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/AirFrost/ranked/Scotland_W.txt" title="Scotland_W Ranked AirFrost" class="external" rel="external">Download</a></td>
+  </tr>
+  <tr>
+   <td><strong>England E &amp; NE</strong></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmax/ranked/England_E_and_NE.txt" title="England_E_and_NE Ranked Tmax" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmin/ranked/England_E_and_NE.txt" title="England_E_and_NE Ranked Tmin" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmean/ranked/England_E_and_NE.txt" title="England_E_and_NE Ranked Tmean" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Sunshine/ranked/England_E_and_NE.txt" title="England_E_and_NE Ranked Sunshine" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Rainfall/ranked/England_E_and_NE.txt" title="England_E_and_NE Ranked Rainfall" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Raindays1mm/ranked/England_E_and_NE.txt" title="England_E_and_NE Ranked Raindays1mm" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/AirFrost/ranked/England_E_and_NE.txt" title="England_E_and_NE Ranked AirFrost" class="external" rel="external">Download</a></td>
+  </tr>
+  <tr>
+   <td><strong>England NW/Wales N</strong></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmax/ranked/England_NW_and_N_Wales.txt" title="England_NW_and_N_Wales Ranked Tmax" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmin/ranked/England_NW_and_N_Wales.txt" title="England_NW_and_N_Wales Ranked Tmin" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmean/ranked/England_NW_and_N_Wales.txt" title="England_NW_and_N_Wales Ranked Tmean" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Sunshine/ranked/England_NW_and_N_Wales.txt" title="England_NW_and_N_Wales Ranked Sunshine" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Rainfall/ranked/England_NW_and_N_Wales.txt" title="England_NW_and_N_Wales Ranked Rainfall" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Raindays1mm/ranked/England_NW_and_N_Wales.txt" title="England_NW_and_N_Wales Ranked Raindays1mm" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/AirFrost/ranked/England_NW_and_N_Wales.txt" title="England_NW_and_N_Wales Ranked AirFrost" class="external" rel="external">Download</a></td>
+  </tr>
+  <tr>
+   <td><strong>Midlands</strong></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmax/ranked/Midlands.txt" title="Midlands Ranked Tmax" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmin/ranked/Midlands.txt" title="Midlands Ranked Tmin" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmean/ranked/Midlands.txt" title="Midlands Ranked Tmean" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Sunshine/ranked/Midlands.txt" title="Midlands Ranked Sunshine" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Rainfall/ranked/Midlands.txt" title="Midlands Ranked Rainfall" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Raindays1mm/ranked/Midlands.txt" title="Midlands Ranked Raindays1mm" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/AirFrost/ranked/Midlands.txt" title="Midlands Ranked AirFrost" class="external" rel="external">Download</a></td>
+  </tr>
+  <tr>
+   <td><strong>East Anglia</strong></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmax/ranked/East_Anglia.txt" title="East_Anglia Ranked Tmax" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmin/ranked/East_Anglia.txt" title="East_Anglia Ranked Tmin" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmean/ranked/East_Anglia.txt" title="East_Anglia Ranked Tmean" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Sunshine/ranked/East_Anglia.txt" title="East_Anglia Ranked Sunshine" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Rainfall/ranked/East_Anglia.txt" title="East_Anglia Ranked Rainfall" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Raindays1mm/ranked/East_Anglia.txt" title="East_Anglia Ranked Raindays1mm" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/AirFrost/ranked/East_Anglia.txt" title="East_Anglia Ranked AirFrost" class="external" rel="external">Download</a></td>
+  </tr>
+  <tr>
+   <td><strong>England SW/Wales S</strong></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmax/ranked/England_SW_and_S_Wales.txt" title="England_SW_and_S_Wales Ranked Tmax" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmin/ranked/England_SW_and_S_Wales.txt" title="England_SW_and_S_Wales Ranked Tmin" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmean/ranked/England_SW_and_S_Wales.txt" title="England_SW_and_S_Wales Ranked Tmean" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Sunshine/ranked/England_SW_and_S_Wales.txt" title="England_SW_and_S_Wales Ranked Sunshine" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Rainfall/ranked/England_SW_and_S_Wales.txt" title="England_SW_and_S_Wales Ranked Rainfall" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Raindays1mm/ranked/England_SW_and_S_Wales.txt" title="England_SW_and_S_Wales Ranked Raindays1mm" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/AirFrost/ranked/England_SW_and_S_Wales.txt" title="England_SW_and_S_Wales Ranked AirFrost" class="external" rel="external">Download</a></td>
+  </tr>
+  <tr>
+   <td><strong>England SE/Central S</strong></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmax/ranked/England_SE_and_Central_S.txt" title="England_SE_and_Central_S Ranked Tmax" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmin/ranked/England_SE_and_Central_S.txt" title="England_SE_and_Central_S Ranked Tmin" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Tmean/ranked/England_SE_and_Central_S.txt" title="England_SE_and_Central_S Ranked Tmean" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Sunshine/ranked/England_SE_and_Central_S.txt" title="England_SE_and_Central_S Ranked Sunshine" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Rainfall/ranked/England_SE_and_Central_S.txt" title="England_SE_and_Central_S Ranked Rainfall" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Raindays1mm/ranked/England_SE_and_Central_S.txt" title="England_SE_and_Central_S Ranked Raindays1mm" class="external" rel="external">Download</a></td>
+   <td><a href="http://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/AirFrost/ranked/England_SE_and_Central_S.txt" title="England_SE_and_Central_S Ranked AirFrost" class="external" rel="external">Download</a></td>
+  </tr>
+ </tbody>
+</table>
+
+</body>
+</html> 

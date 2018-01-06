@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KisanHub Data Collection and Analytic System</title>
+</head>
+<body>
+    <h1>Hello, welcome to the KisanHub Data Analytic System</h1>
+
+    <p>This is a demonstrative application that is used to demonstrate how Python/Django model is applied to implement a
+        data collection and analytic system. Before starting the simulation, you will need to create a local MySQL database
+        'kisanhub' and a use 'kisanhub@localhost' first, and grant all priviledges of the database to this user. You can do it mannually
+        or used the shell scrip to automate the process.
+    </p>
+
+    <p> After that, you will need to populate the regional resource database by specifying the region and the dataset url. Once regional
+        database is populated, you can start to crawl data by selecting the resource link. The collected data will be parsed and saved
+        into Annual and Seasonal databases respectively. It should be noticed that, since we are using single thread to process a comparatively
+        large scale data set, the end user is expecting to experiencing slow web service response during the crawling and parsing process.
+    </p>
+
+    <p> In this demonstrative application, we included a machine learning layer where the Standard Linear Regression Model (SLRM) and
+        the Locally Weighted Linear Regression Model (LWLRM) are implemented. We provided a demonstrative example to graphically show the
+        linear relationship between the maxium temperature and minium temperature. 
+    </p>
+
+    <br>
+
+    <hline>
+    <label>A. <em>Populate Regional Database:</em> </label> <a href="/region_profile">Populate Regional Profiles</a>
+    <br>
+    <label>B. <em>Crawling Regional Data:</em> </label> <a href="/crawl_data">Crawling Regional Data</a>
+    <br>
+    <label>C. <em>Show Linear Relation Between Max and Min Temperature</em> </label> <a href="/max_min_regression">Max and Min Linear Regression</a>
+
+
+</body>
+</html> 

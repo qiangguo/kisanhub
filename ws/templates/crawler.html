@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crawling Data</title>
+</head>
+<body>
+    <a href="/">HOME</a> | <a href="/region_profile">Populate Regional Profile</a> | <a href="/max_min_regression">Show Max/Min Regression</a>
+    <p>This page provides service for crawling and parsing raw data from a specified regional resource. A resource is specified in the
+       format</p> 
+    <p><b>RegionName</b>-<b>URL</b>-<b>ResourceType</b>-<b>PresentType</b>
+    <p>Multiple requests for a single regional resource
+       will overwrite previously accommodated data. 
+    </p>
+    <br>
+    {% if not resource_records %}
+        <h1>WARNING</h1>
+        <p>There is no regional resource record saved in the database</p>
+        <p>Before starting to crawl data, please populate the regional resources to the database first ... </p>
+        <p>Please go to <a href="/region_profile">Regional Profile</a> page to populate the regional resources</P>
+    {% else %}
+        <h1>Please select a resource for crawling data</h1>
+        <form action="/crawl_data" method="POST">
+            <label>Resources: </label>
+            <select name="url">
+            {% for v in resource_records %}
+                 <option value={{ v }}>{{ v }}</option>
+            {% endfor %}
+            </select>
+            <br>
+            <input type="submit" value="submit">
+        </form>
+        <br>
+        <p>*NOTE: Due to single thread upon data processing, end user is expecting to experience slow web service response. </p> 
+    {% endif %}
+</body>
+</html>

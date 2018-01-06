@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Max and Min temperature regression</title>
+</head>
+<body>
+    <a href="/">HOME</a> | <a href="/region_profile">Populate Regional Profile</a> | <a href="/crawl_data">Crawl Data</a>
+    <p> Demonstration linear relation between Max and Min temperature. The dot points show the dataset;
+    while the red line show the linear relationship between Max and Min. </p>
+    <br>
+    <svg height="1000" width="1200">
+        {% for x, y in points %}
+        <circle cx={{ x }} cy= {{ y }} r="2" stroke="black" stroke-width="3" fill="red" />
+        {% endfor %}
+    <line x1={{ startPointX }} y1={{ startPointY }} x2={{ endPointX }} y2={{ endPointY }} style="stroke:rgb(255,0,0);stroke-width:4" />
+    </svg>
+</body>
+</html>
